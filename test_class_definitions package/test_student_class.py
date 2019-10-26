@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
     def tearDown(self):
         del self.student
 
-    def test_object_created_all_attributes(self):
+    def test_object_created_required_attributes(self):
         self.assertEqual(self.student.last_name, 'Smith')
         self.assertEqual(self.student.first_name, 'Joe')
         self.assertEqual(self.student.major, 'CIS')
