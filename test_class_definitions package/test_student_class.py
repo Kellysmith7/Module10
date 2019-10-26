@@ -25,6 +25,14 @@ class MyTestCase(unittest.TestCase):
         student = sc.Student('Smith', 'Joe', 'CIS', 3.5)
         self.assertEqual(str(student), 'Smith, Joe has major CIS with gpa: 3.5')
 
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            student = sc.Student('555666', 'Joe', 'CIS', 3.5)
+#         that expect exception raised.
+# Run failing test, commit to github
+# Add exception to constructor
+# Run passing test, commit to github
+
 
 if __name__ == '__main__':
     unittest.main()
