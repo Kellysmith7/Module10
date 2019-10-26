@@ -14,6 +14,13 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.student.first_name, 'Joe')
         self.assertEqual(self.student.major, 'CIS')
 
+    def test_object_created_all_attributes(self):
+        student = sc.Student('Smith', 'Joe', 'CIS', 3.5)
+        assert student.last_name == 'Smith'
+        assert student.first_name == 'Joe'
+        assert student.major == 'CIS'
+        assert student.gpa == 3.5
+
 
 if __name__ == '__main__':
     unittest.main()
